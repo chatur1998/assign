@@ -151,20 +151,20 @@ function App() {
 
       {isLoaded ? (
         <div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <h2>{currentPage}</h2>
+          </div>
+
           {data.map((item) => {
             return (
-              <div
-                style={{ cursor: "pointer" }}
-                onClick={() => window.open(URL, "_blank")}
-              >
-                <NewsCard
-                  url={item.url}
-                  title={item.title}
-                  author={item.author}
-                  key={item.objectID}
-                  date={item.created_at}
-                />
-              </div>
+              <div style={{cursor: 'pointer'}} onClick={}>
+              <NewsCard
+                url={item.url}
+                title={item.title}
+                author={item.author}
+                key={item.objectID}
+                date={item.created_at}
+              />
             );
           })}
         </div>
